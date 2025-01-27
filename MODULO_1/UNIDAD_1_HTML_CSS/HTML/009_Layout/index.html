@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="RoMa-88">
+    <meta name="description" content="Layout">
+    <link rel="icon" type="image/png" href="images/faviconAdn.png">
+    <title>Layout Semántico HTML</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #333;
+            overflow: hidden;
+        }
+
+        nav a {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        nav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        main {
+            display: flex;
+            flex: 1;
+            flex-wrap: wrap;
+            padding: 1rem;
+        }
+
+        article {
+            flex: 3;
+            padding: 1rem;
+            padding-right: 5rem;
+        }
+
+        aside {
+            flex: 1;
+            padding: 1rem;
+            background-color: #f4f4f4;
+
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+        }
+
+        footer>span {
+            font-size: small;
+        }
+
+        nav>button {
+            color: #4CAF50
+        }
+
+        /*   span{
+            font-size: small;
+        }
+        #copyright{
+            font-size: small;
+        }*/
+        .articleMain {
+            color: green
+        }
+
+        @media (max-width: 768px) {
+            nav a {
+                float: none;
+                width: 100%;
+            }
+
+            main {
+                flex-direction: column;
+            }
+
+            article,
+            aside {
+                flex: 1;
+                margin: 0.5rem 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Mi sitio web</h1>
+    </header>
+
+    <nav>
+
+        <a>inicio</a>
+        <a>Acerca de</a>
+        <a>Servivios</a>
+        <a>Contactos</a>
+    </nav>
+
+    <main>
+        <article>
+            <h1>Articulo Principal</h1>
+            <article>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusamus eveniet illum aliquam provident,
+                quod quo suscipit a iste odio, error fugit exercitationem unde voluptatum placeat nam pariatur
+                necessitatibus voluptatem dolorum?
+                Este es el contenido principal del sitio web. Aqui puedes agregar cualquier cosa que quieras
+                compartir
+                con tus visitantes </article>
+        </article>
+        <aside>
+            <h2>Información Adicional</h2>
+            Este es un espacio para contenido adicional, como enlaces útiles,
+            información de contacto, o cualquier otra cosa que complementa el articulo principal.
+        </aside>
+    </main>
+
+    <footer>
+        <div id="footer">
+            &copy; 2024 Mi Sitio Web. Todos los derechos resservados.
+        </div>
+    </footer>
+
+
+</body>
+
+</html>

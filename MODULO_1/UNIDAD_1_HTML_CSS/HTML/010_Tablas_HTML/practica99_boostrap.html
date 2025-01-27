@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="RoMa-88">
+    <meta name="description" content="Layout">
+    <link rel="icon" type="image/png" href="images/faviconAdn.png">
+    <title>Tablas HTML 01</title>
+    <style>
+        table {
+            width: 80%;
+            border-collapse: collapse;
+            table-layout: fixed;
+            /* Fuerza ancho uniforme */
+        }
+
+        td {
+            border: 3px solid white;
+            text-align: center;
+            width: calc(100% / 7);
+            /* División equitativa en 7 columnas */
+            height: 50px;
+            /* Altura uniforme */
+        }
+    </style>
+</head>
+
+<body>
+
+    <table style="width: 80%;" align="center" border="1">
+        <!-- Fila 1 -->
+        <tr>
+            <td bgcolor="green" colspan="7">
+                bg-success
+            </td>
+        </tr>
+
+        <!-- Fila 2 -->
+        <tr>
+            <td bgcolor="red" colspan="3" rowspan="2">
+                bg-danger
+            </td>
+            <td bgcolor="yellow" colspan="4">
+                bg-warning
+            </td>
+        </tr>
+
+        <!-- Fila 3 -->
+        <tr>
+            <td bgcolor="blue">
+                bg-info
+            </td>
+            <td bgcolor="green" rowspan="2">
+                bg-success
+            </td>
+            <td bgcolor="blue" colspan="2" rowspan="4">
+                bg-info
+            </td>
+        </tr>
+
+        <!-- Fila 4 -->
+        <tr>
+            <td bgcolor="black" colspan="4" rowspan="2">
+                bg-dark
+            </td>
+        </tr>
+
+        <!-- Fila 5 -->
+        <tr>
+            <td bgcolor="red">
+                bg-danger
+            </td>
+        </tr>
+
+        <!-- Fila 6 -->
+        <tr>
+            <td bgcolor="yellow" colspan="5" rowspan="2">
+                bg-warning
+            </td>
+
+        </tr>
+
+        <!-- Fila 7 -->
+        <tr>
+            <td bgcolor="green">
+                bg-success
+            </td>
+            <td bgcolor="grey" rowspan="2">
+                bg-secondary
+            </td>
+        </tr>
+
+        <!-- Fila 8 -->
+        <tr>
+            <td bgcolor="red" colspan="2">
+                bg-danger
+            </td>
+            <td bgcolor="grey" colspan="2">
+                bg-secondary
+            </td>
+            <td bgcolor="black" colspan="2">
+                bg-dark
+            </td>
+        </tr>
+    </table>
+
+</body>
+
+</html>

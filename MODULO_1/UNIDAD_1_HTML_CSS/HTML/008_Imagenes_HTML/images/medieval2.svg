@@ -1,0 +1,51 @@
+<svg width="800" height="400" viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
+    <!-- Fondo del cielo con animación día/noche -->
+    <rect id="sky" width="100%" height="100%" fill="#87CEEB">
+        <animate attributeName="fill" values="#87CEEB;#1E3A5F;#000033;#87CEEB" dur="20s" repeatCount="indefinite"/>
+    </rect>
+
+    <!-- Sol animado -->
+    <circle id="sun" cx="100" cy="50" r="30" fill="yellow">
+        <animate attributeName="cx" values="100;400;700;100" dur="20s" repeatCount="indefinite"/>
+        <animate attributeName="cy" values="50;200;400;50" dur="20s" repeatCount="indefinite"/>
+        <animate attributeName="fill" values="yellow;orange;red;yellow" dur="20s" repeatCount="indefinite"/>
+    </circle>
+
+    <!-- Luna animada -->
+    <circle id="moon" cx="700" cy="350" r="30" fill="gray" opacity="0">
+        <animate attributeName="opacity" values="0;0;1;1;0" dur="20s" repeatCount="indefinite"/>
+        <animate attributeName="cx" values="700;400;100;700" dur="20s" repeatCount="indefinite"/>
+        <animate attributeName="cy" values="350;200;50;350" dur="20s" repeatCount="indefinite"/>
+    </circle>
+
+    <!-- Ciervos moviéndose durante el día -->
+    <rect id="deer" x="50" y="300" width="50" height="30" fill="brown">
+        <animate attributeName="x" values="50;600;50" dur="20s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="1;1;0;0;1" dur="20s" repeatCount="indefinite"/>
+    </rect>
+
+    <!-- Búho en el bosque que aparece de noche -->
+    <circle id="owl" cx="600" cy="150" r="15" fill="black" opacity="0">
+        <animate attributeName="opacity" values="0;0;1;1;0" dur="20s" repeatCount="indefinite"/>
+        <animateTransform attributeName="transform" type="translate" values="0 0;0 10;0 0" dur="3s" repeatCount="indefinite"/>
+    </circle>
+
+    <!-- Cuervos volando por la noche -->
+    <circle id="crow" cx="500" cy="100" r="8" fill="black" opacity="0">
+        <animate attributeName="opacity" values="0;0;1;1;0" dur="20s" repeatCount="indefinite"/>
+        <animate attributeName="cx" values="500;700;500" dur="10s" repeatCount="indefinite"/>
+    </circle>
+
+    <!-- Fuego animado de noche -->
+    <polygon id="fire" points="400,300 420,270 440,300" fill="orange" opacity="0">
+        <animate attributeName="opacity" values="0;0;1;0.8;1;0;0" dur="20s" repeatCount="indefinite"/>
+        <animate attributeName="fill" values="orange;red;yellow;orange" dur="1s" repeatCount="indefinite"/>
+        <animateTransform attributeName="transform" type="scale" values="1;1.2;1" dur="0.5s" repeatCount="indefinite"/>
+    </polygon>
+
+    <!-- Fogata -->
+    <rect id="campfire" x="390" y="310" width="40" height="10" fill="brown" />
+
+    <!-- Suelo -->
+    <rect x="0" y="350" width="800" height="50" fill="#4e3d28" />
+</svg>
