@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="RoMa-88">
+    <meta name="description" content="Incrustaciones de enlaces en HTML">
+    <link rel="icon" type="image/png" href="resources/images/faviconAdn.png">
+    <title>Incrustaciones HTML 01</title>
+    <style>
+        /* Estilos para la barra de navegación */
+        nav {
+            background-color: #333;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav ul li a:hover {
+            text-decoration: underline;
+        }
+
+        /* Estilos para centrar la tabla en la página */
+        table {
+            margin: auto;
+            text-align: center;
+            border-collapse: collapse;
+            width: 80%;
+        }
+
+        /* Estilos para las celdas de la tabla */
+        td,
+        th {
+            vertical-align: top;
+            padding: 10px;
+            border: 1px solid #ddd;
+        }
+
+        /* Estilos para los encabezados de las columnas */
+        th {
+            background-color: #f2f2f2;
+            font-size: 1.2em;
+        }
+
+        /* Estilos para la celda que abarca ambas columnas */
+        td[colspan="2"] {
+            text-align: center;
+        }
+
+        /* Estilos para el pie de página */
+        footer {
+            background-color: #222;
+            color: #ddd;
+            padding: 20px;
+            text-align: center;
+            font-style: italic;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Barra de Navegación -->
+    <nav>
+        <ul>
+            <li><a href="#imagenes">Imágenes</a></li>
+            <li><a href="#videos-locales">Videos Locales</a></li>
+            <li><a href="#videos-remotos">Videos Remotos</a></li>
+            <li><a href="#mapas">Mapas</a></li>
+            <li><a href="#audio">Audio</a></li>
+            <li><a href="#footer">Footer</a></li>
+        </ul>
+    </nav>
+
+    <!-- Sección de Imágenes -->
+    <section id="imagenes">
+        <table>
+            <tr>
+                <th>Barcelona</th>
+                <th>Montserrat</th>
+            </tr>
+            <tr>
+                <td style="text-align: center; vertical-align: middle;">
+                    <!-- Incrustación de una imagen de Barcelona -->
+                    <img src="resources/images/barcelona-3226639_640.jpg" alt="Imagen de Barcelona"
+                        style="max-width: 100%; height: auto; display: block; margin: auto;">
+                </td>
+
+                <td>
+                    <!-- Incrustación de una imagen de Montserrat -->
+                    <img src="resources/images/montserrat-5033347_640.jpg" alt="Imagen de Montserrat" width="100%">
+                </td>
+            </tr>
+        </table>
+    </section>
+
+    <!-- Sección de Videos Locales -->
+    <section id="videos-locales">
+        <h2>Videos Locales</h2>
+        <table>
+            <tr>
+                <th colspan="2"></th>
+
+            </tr>
+            <tr>
+                <td>
+                    <!-- Incrustación de un video local de Barcelona -->
+                    <video src="resources/video/timelapseBcn.mp4" controls width="100%"></video>
+                </td>
+                <td>
+                    <!-- Incrustación de un video local de Montserrat -->
+                    <video src="resources/video/montserrat.mp4" controls width="100%"></video>
+                </td>
+            </tr>
+        </table>
+    </section>
+
+    <!-- Sección de Videos Remotos -->
+    <section id="videos-remotos">
+        <h2>Videos Remotos</h2>
+        <table>
+            <tr>
+                <th colspan="2"></th>
+            </tr>
+            <tr>
+                <td>
+                    <!-- Incrustación de un video de Barcelona desde YouTube -->
+                    <iframe width="100%" height="315" src="https://www.youtube.com/embed/81iLbQLQECw?start=5"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </td>
+                <td>
+                    <!-- Incrustación de un video de Montserrat desde YouTube -->
+                    <iframe width="100%" height="315" src="https://www.youtube.com/embed/f7DL8iFjvHE"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </td>
+            </tr>
+        </table>
+    </section>
+
+    <!-- Sección de Mapas -->
+    <section id="mapas">
+        <h2>Mapas</h2>
+        <table>
+            <tr>
+                <th colspan="2"></th>
+            </tr>
+            <tr>
+                <td>
+                    <!-- Incrustación de un mapa de Barcelona desde Google Maps -->
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d95780.66762253016!2d2.057788097363807!3d41.39263855792015!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a49816718e30e5%3A0x44b0fb3d4f47660a!2sBarcelona!5e0!3m2!1ses!2ses!4v1737982369871!5m2!1ses!2ses"
+                        width="100%" height="450" style="border:0;" allowfullscreen loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+
+                </td>
+                <td>
+                    <!-- Incrustación de un mapa de Montserrat desde Google Maps -->
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d23870.19110382935!2d1.809214613708316!3d41.59577411151156!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a45fe93018cfe7%3A0x1ebab017ff86d3c!2sMontserrat!5e0!3m2!1ses!2ses!4v1737982726859!5m2!1ses!2ses"
+                        width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </td>
+            </tr>
+        </table>
+    </section>
+
+    <!-- Sección de Audio -->
+    <section id="audio">
+        <h2>Audio</h2>
+        <audio controls>
+            <source src="resources/audio/lost-in-dreams-abstract-chill-downtempo-cinematic-future-beats-270241.mp3"
+                type="audio/mpeg">
+            Tu navegador no soporta la reproducción de audio.
+        </audio>
+    </section>
+
+    <!-- Pie de página -->
+    <footer id="footer">
+        <p>Créditos:</p>
+        <blockquote>
+            <p>Imagen de <a
+                    href="https://pixabay.com/es/users/walkerssk-1409366/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=3226639">Walkerssk</a>
+                en <a
+                    href="https://pixabay.com/es//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=3226639">Pixabay</a>
+            </p>
+            <p>Imagen de <a
+                    href="https://pixabay.com/es/users/mh_stuttgart-15793933/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=5033347">Matthias
+                    Hoensch</a> en <a
+                    href="https://pixabay.com/es//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=5033347">Pixabay</a>
+            </p>
+            <p>Timelapse Barcelona Crédito: giddyuptimelapse</p>
+            <p>Timelapse Montserrat Crédito: imv</p>
+            <p>Música por <a
+                    href="https://pixabay.com/es/users/kulakovka-47183261/?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=270241">Alehandro
+                    Vodnik</a> de <a
+                    href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=270241">Pixabay</a>
+            </p>
+        </blockquote>
+    </footer>
+</body>
+
+</html>
