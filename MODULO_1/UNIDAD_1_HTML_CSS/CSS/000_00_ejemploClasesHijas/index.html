@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selector Directo en CSS: Películas y Géneros</title>
+    <style>
+        /* Estiliza solo los <li> hijos directos de <ul> */
+        ul>li {
+            color: darkblue;
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        /* Estiliza solo los <li> hijos directos de <ol> */
+        ol>li {
+            color: darkgreen;
+            font-style: italic;
+            font-size: 18px;
+        }
+
+        /* Estiliza los <li> hijos de hijos dentro de una sublista <ul> */
+        ul li ul li {
+            color: gray;
+            font-size: 14px;
+            font-weight: normal;
+        }
+
+        /* Estiliza los <li> hijos de hijos dentro de una sublista <ol> */
+        ol li ol li {
+            color: gray;
+            font-size: 14px;
+            font-style: normal;
+        }
+
+        /* Opcional: estiliza las listas para una mejor presentación */
+        ul,
+        ol {
+            margin-left: 20px;
+            padding-left: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Ejemplo: Selectores Directos en CSS con Películas</h1>
+
+    <h2>Géneros de Películas (Lista No Ordenada: `ul`)</h2>
+    <ul>
+        <li>Acción (Género principal)</li>
+        <li>Ciencia Ficción (Género principal)
+            <ul>
+                <li>Blade Runner (1982)</li>
+                <li>Matrix (1999)</li>
+            </ul>
+        </li>
+        <li>Fantasía (Género principal)
+            <ul>
+                <li>El Señor de los Anillos: La Comunidad del Anillo (2001)</li>
+                <li>Harry Potter y la Piedra Filosofal (2001)</li>
+            </ul>
+        </li>
+    </ul>
+
+    <h2>Títulos de Películas Ordenados por Año (Lista Ordenada: `ol`)</h2>
+    <ol>
+        <li>Películas de los años 80 (Categoría principal)
+            <ol>
+                <li>Indiana Jones en busca del Arca Perdida (1981)</li>
+                <li>Regreso al Futuro (1985)</li>
+            </ol>
+        </li>
+        <li>Películas de los años 90 (Categoría principal)
+            <ol>
+                <li>El Rey León (1994)</li>
+                <li>El Club de la lucha (1999)</li>
+            </ol>
+        </li>
+        <li>Películas de los 2000 (Categoría principal)</li>
+    </ol>
+</body>
+
+</html>
