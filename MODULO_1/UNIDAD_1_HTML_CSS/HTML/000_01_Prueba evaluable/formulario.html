@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="RoMa-88">
+    <meta name="description" content="formulario dentro de una tabla en HTML">
+
+    <title>Formulario</title>
+</head>
+
+<body>
+    <form id="form" name="form" method="get" action="recibir.html">
+        <fieldset>
+            <legend style="width: 100px; text-align: center;">Formulario</legend>
+            <table>
+                <tr>
+                    <td><label for="fnombre">Nombre:</label></td>
+                    <td><input name="fnombre" id="fnombre" type="text" placeholder="Escribe tu nombre" required
+                            style="width: 100px;" /></td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <hr>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="fcorreo">Email:</label></td>
+                    <td><input name="fcorreo" id="fcorreo" type="email" placeholder="ejemplo@email.com" required
+                            style="width: 100px;" /></td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <hr>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="fnacimiento">Fecha de nacimiento:</label></td>
+                    <td><input name="fnacimiento" id="fnacimiento" type="date" required style="width: 100px;" /></td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <hr>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="cursos">Cursos:</label></td>
+                    <td>
+                        <label><input type="checkbox" id="fpython" name="cursos" value="Python" /> Python</label><br />
+                        <label><input type="checkbox" id="fphp" name="cursos" value="PHP" /> PHP</label><br />
+                        <label><input type="checkbox" id="fjavascript" name="cursos" value="JavaScript" />
+                            JavaScript</label><br />
+                        <label><input type="checkbox" id="fcplusplus" name="cursos" value="C++" /> C++</label><br />
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <hr>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="estudios">Estudios:</label></td>
+                    <td>
+                        <label><input type="radio" id="basico" name="estudios" value="Básico" required />
+                            Básico</label><br />
+                        <label><input type="radio" id="medio" name="estudios" value="Medio" /> Medio</label><br />
+                        <label><input type="radio" id="superior" name="estudios" value="Superior" /> Superior</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <hr>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="fnivel">Nivel de inglés:</label></td>
+                    <td>
+                        <input name="fnivel" id="fnivel" type="range" min="0" max="10" step="1" value="5"
+                            style="width: 100px;" />
+                        <div class="range-scale">
+                            <span>0</span>
+                            <span>1</span>
+                            <span>2</span>
+                            <span>3</span>
+                            <span>4</span>
+                            <span>5</span>
+                            <span>6</span>
+                            <span>7</span>
+                            <span>8</span>
+                            <span>9</span>
+                            <span>10</span>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <hr>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="3" style="text-align: center;">
+                        <input type="submit" value="Enviar" />
+                    </td>
+                </tr>
+            </table>
+        </fieldset>
+    </form>
+</body>
+
+
+</html>
