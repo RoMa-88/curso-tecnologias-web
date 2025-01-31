@@ -1,0 +1,149 @@
+/*Añade aquí la fuente "Lato" de Google Fonts con @import*/
+
+* {
+    font-family: 'Lato';
+    font-weight: 900;
+    /*establece la fuente Lato para todos los elementos*/
+}
+
+nav ul {
+
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    /*Asegúrate de que tenga un margen y un relleno de 0 y que su lista de estilos sea none*/
+}
+
+/*Selector los enlaces */
+a {
+    width: 100px;
+    text-decoration: none;
+    text-align: center;
+    color: white;
+    background-color: black;
+    padding: 10px 5px;
+    border-right: 1px solid #336699;
+    display: block;
+}
+
+/*Selector. los elementos de menu superior, en horizontal */
+nav>ul>li {
+    float: left;
+}
+
+nav>ul a:hover {
+    background-color: #336699;
+}
+
+li:last-child a {
+    border-right: none;
+    /*ocultar borde derecho*/
+}
+
+ul.menu {
+    width: 180px;
+    list-style-type: none;
+    border: 1px, solid, #FFC83D;
+    margin: 0px;
+    padding: 0px;
+    /* Borde de 1px con el color #FFC83D*/
+    /* sin margen ni relleno */
+}
+
+ul.menu li {
+    border-bottom: 1px solid #FFC83D;
+}
+
+ul.menu li:last-child {
+    border-bottom: none;
+}
+
+ul.menu>li:first-child>a {
+    padding-top: 2rem;
+}
+
+
+/* selector los enlaces del menu vertical*/
+.menu a {
+    text-align: center;
+    display: block;
+    text-decoration: none;
+    padding: 10px;
+    color: #333;
+    background-color: #E5F3FE;
+    width: 10rem;
+    border-right: none;
+    /*centrar el texto, no mostrar subrayado 
+    y tener un color de texto de #333. Además, 
+    debe tener un relleno de 5px y un fondo 
+    de color #E5F3FE.*/
+}
+
+ul.menu li a:hover {
+    background-color: #c8e2f7;
+    /*fondo color #c8e2f7*/
+}
+
+.menu>li a::before {
+    content: "👉 ";
+}
+
+.lato-thin {
+    font-family: "Lato", serif;
+    font-weight: 100;
+    font-style: normal;
+}
+
+.lato-light {
+    font-family: "Lato", serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
+.lato-regular {
+    font-family: "Lato", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.lato-bold {
+    font-family: "Lato", serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.lato-black {
+    font-family: "Lato", serif;
+    font-weight: 900;
+    font-style: normal;
+}
+
+.lato-thin-italic {
+    font-family: "Lato", serif;
+    font-weight: 100;
+    font-style: italic;
+}
+
+.lato-light-italic {
+    font-family: "Lato", serif;
+    font-weight: 300;
+    font-style: italic;
+}
+
+.lato-regular-italic {
+    font-family: "Lato", serif;
+    font-weight: 400;
+    font-style: italic;
+}
+
+.lato-bold-italic {
+    font-family: "Lato", serif;
+    font-weight: 700;
+    font-style: italic;
+}
+
+.lato-black-italic {
+    font-family: "Lato", serif;
+    font-weight: 900;
+    font-style: italic;
+}

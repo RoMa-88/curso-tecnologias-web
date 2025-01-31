@@ -1,0 +1,73 @@
+#contenedor {
+    position: relative;
+    /* contenedor 400x350 */
+    width: 400px;
+    height: 350px;
+    margin: 20px auto;
+    border: 1px solid #000;
+    background-color: #ccc;
+}
+
+.tejado {
+    position: absolute;
+    /* teulat eixamplat */
+    top: 0;
+    left: -20px;
+    width: 440px;
+    height: 40px;
+    background-color: red;
+    border: 1px solid #000;
+}
+
+.casa {
+    position: absolute;
+    /* cos de la casa */
+    top: 40px;
+    left: 0;
+    width: 400px;
+    height: 310px;
+    border: 1px solid #000;
+    background-color: #ccc;
+}
+
+.puerta {
+    position: absolute;
+    /* porta centrada a mà */
+    bottom: 0;
+    left: 170px;
+    width: 60px;
+    height: 90px;
+    background-color: #99c;
+    border: 1px solid #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.puerta h1 {
+    margin: 0;
+    font-size: 1.1rem;
+}
+
+.ventana {
+    position: absolute;
+    /* finestra quadrada */
+    top: 120px;
+    right: 40px;
+    width: 60px;
+    height: 60px;
+    border: 1px solid #000;
+    background-color: #6a9;
+}
+
+.ventana2 {
+    position: absolute;
+    /* finestra rodona */
+    top: 60px;
+    left: 30px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: purple;
+    border: 1px solid #000;
+}

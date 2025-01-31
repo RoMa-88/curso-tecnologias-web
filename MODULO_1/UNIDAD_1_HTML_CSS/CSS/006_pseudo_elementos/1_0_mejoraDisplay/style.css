@@ -1,0 +1,92 @@
+/* --------------------------------------------------- */
+/* 1) Estils bàsics del botó                           */
+/* --------------------------------------------------- */
+button {
+    color: transparent;
+    /* El contingut HTML es queda amagat: no es veurà */
+    background-color: #007BFF;
+    /* Color de fons inicial del botó */
+    border: none;
+    /* Traiem contorn per defecte */
+    padding: 10px 20px;
+    /* Marges interns */
+    border-radius: 5px;
+    /* Arrodonim les cantonades */
+    font-size: 16px;
+    /* Mida de la lletra */
+    cursor: pointer;
+    /* Cursor en forma de "mà" al passar-hi per sobre */
+    position: relative;
+    /* Necessari si fem servir posicions absolutes als pseudo-elements */
+
+    /* TRANSICIÓ SUAU DE COLOR i FONS */
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* --------------------------------------------------- */
+/* 2) Text per defecte amb ::before                    */
+/* --------------------------------------------------- */
+button::before {
+    content: 'Corrígeme!';
+    /* Sense espais al principi o final per assegurar que
+       la primera lletra és la "C" */
+    color: white;
+    /* Color de text per defecte en blanc */
+    display: inline-block;
+}
+
+/* Primera lletra en verd i en negreta (bold) */
+button::before::first-letter {
+    color: green !important;
+    font-weight: bold;
+    /* Negreta */
+}
+
+/* --------------------------------------------------- */
+/* 3) Hover: canvi de color de fons del botó i contingut */
+/* --------------------------------------------------- */
+button:hover {
+    background-color: #0c3f17;
+    /* Canvia el color de fons de TOT el botó a un to verd fosc */
+}
+
+/* Text que apareix en hover (substitueix 'Corrígeme!') */
+button:hover::before {
+    content: 'Haz Click!';
+    color: lightgreen;
+    background-color: transparent;
+}
+
+/* Primera lletra quan hover en "Haz Click!" */
+button:hover::before::first-letter {
+    color: #90ee90 !important;
+    /* Un verd clar (p.ex. 'LightGreen') perquè faci contrast */
+    font-weight: bold;
+    /* Negreta */
+}
+
+/* --------------------------------------------------- */
+/* 4) Focus: un cop clicat, canvis a TOT el botó i text */
+/* --------------------------------------------------- */
+button:focus {
+    outline: 2px solid chartreuse;
+    /* Contorn visible quan està en focus */
+    background-color: blueviolet;
+    /* El botó en si canvia a un to lila/violat */
+}
+
+/* Substituïm el text per "Ya has visitado..." */
+button:focus::before {
+    content: 'Ya has visitado este recurso';
+    color: rgb(255, 255, 127);
+    /* Color de text groc */
+    background-color: transparent;
+}
+
+/* Primera lletra quan està en focus */
+button:focus::before::first-letter {
+    color: rgb(213, 85, 26) !important;
+    /* Fes-la taronja per contrastar sobre el groc */
+    font-weight: bold;
+    /* Negreta */
+}

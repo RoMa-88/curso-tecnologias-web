@@ -1,0 +1,62 @@
+/* CONTENIDOR PER CENTRAR LES TRES FASES */
+.separador {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+    gap: 2rem;
+    /* Espai entre elements */
+}
+
+/* LLUNA PLENA */
+.luna-llena {
+    width: 3rem;
+    height: 3rem;
+    /* background: url("ruta/de/la/teva_imatge.jpg") no-repeat center/cover; */
+    background-color: #ccc;
+    border-radius: 50%;
+}
+
+/* LLUNA CREIXENT (Cóncava) */
+.creciente-concava {
+    width: 3rem;
+    height: 3rem;
+    background-color: #ccc;
+    border-radius: 50%;
+    position: relative;
+    overflow: hidden;
+}
+
+.creciente-concava::after {
+    content: "";
+    position: absolute;
+    width: 3rem;
+    height: 3rem;
+    background-color: #000;
+    border-radius: 50%;
+    top: 0;
+    left: 0;
+    transform: translateX(30%);
+}
+
+/* LLUNA MINVANT (Cóncava) */
+.menguante-concava {
+    width: 3rem;
+    height: 3rem;
+    background-color: #ccc;
+    border-radius: 50%;
+    position: relative;
+    overflow: hidden;
+}
+
+.menguante-concava::after {
+    content: "";
+    position: absolute;
+    width: 3rem;
+    height: 3rem;
+    background-color: #000;
+    border-radius: 50%;
+    top: 0;
+    right: 0;
+    transform: translateX(-30%);
+}

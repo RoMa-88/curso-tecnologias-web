@@ -1,0 +1,36 @@
+/* Exercici pseudo-classes en CSS */
+
+/* Estil base del botó */
+button {
+    background-color: #444;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+/* Primera lletra verda */
+button::first-letter {
+    color: green;
+}
+
+/* Hover: canvia color i afegeix text abans */
+button:hover {
+    color: orange;
+}
+
+button:hover::before {
+    content: "Haz click! ";
+    color: white;
+}
+
+/* Focus: text després i tot blanc */
+button:focus::after {
+    content: "Ya has visitado este recurso";
+    color: white;
+}
+
+button:focus::before::first-letter {
+    color: red;
+    font-weight: bolder;
+}

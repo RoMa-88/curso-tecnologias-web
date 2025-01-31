@@ -1,0 +1,99 @@
+/* 🌌 Fondo de Estrellas y Efecto Shimmer */
+.container {
+    background-image: linear-gradient(#051327, #000);
+    inset: 0;
+    position: fixed;
+    z-index: -1;
+    animation: shimmer 8s infinite;
+}
+
+/* 🌟 Estrellas Redondas */
+.space {
+    --size: 2px;
+    --space-layer:
+        4vw 50vh 0 #fff,
+        18vw 88vh 0 #fff,
+        73vw 14vh 0 #fff;
+
+    width: var(--size);
+    height: var(--size);
+    background: white;
+    border-radius: 50%;
+    /* Hace que las estrellas sean redondas */
+    box-shadow: var(--space-layer);
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0.75;
+    animation: move var(--duration) linear infinite;
+}
+
+/* 🌠 Estrellas Fugaces */
+.shooting-stars {
+    --shooting-stars-layer: 10vw 80vh 0 #fff, 60vw 90vh 0 #fff;
+    width: 4px;
+    height: 4px;
+    background: transparent;
+    box-shadow: var(--shooting-stars-layer);
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0.7;
+    animation: shootingMove 5s ease-in-out infinite;
+}
+
+/* 🌠 Animación de las Estrellas Fugaces */
+@keyframes shootingMove {
+    from {
+        transform: translate(0, 0);
+        opacity: 1;
+    }
+
+    to {
+        transform: translate(100vw, 100vh);
+        opacity: 0;
+    }
+}
+
+/* ✨ Animación del Movimiento de Estrellas */
+@keyframes move {
+    from {
+        transform: translateY(0);
+    }
+
+    to {
+        transform: translateY(-100vh);
+    }
+}
+
+/* 🌟 Efecto de Brillo Metálico */
+body {
+    background: radial-gradient(circle, #eef7fc, #d6e8f0, #a4c0d8, #5e8caa);
+    background-size: 200% 200%;
+    animation: shimmer 8s infinite;
+    margin: 0;
+    padding: 0;
+}
+
+/* 🌟 Animación Shimmer */
+@keyframes shimmer {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+/* 🌌 Fondo de estrellas con animación shimmer sin imagen */
+body {
+    background: radial-gradient(circle, #eef7fc, #d6e8f0, #a4c0d8, #5e8caa);
+    background-size: 200% 200%;
+    animation: shimmer 8s infinite;
+    margin: 0;
+    padding: 0;
+}

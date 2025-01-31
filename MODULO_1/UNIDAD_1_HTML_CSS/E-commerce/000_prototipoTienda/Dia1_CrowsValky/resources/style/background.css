@@ -1,0 +1,48 @@
+/* 🌌 Fondo oscuro con gradiente */
+.background-container {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(10, 10, 25, 1) 20%, rgba(0, 0, 0, 1) 80%);
+    z-index: -1;
+    overflow: hidden;
+}
+
+canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #020d18;
+    /* Azul muy oscuro, similar al espacio */
+    z-index: -1;
+}
+
+
+/* 🔄 Animaciones */
+@keyframes moveStars {
+    from {
+        transform: translateY(0px);
+    }
+
+    to {
+        transform: translateY(-200px);
+    }
+}
+
+@keyframes shootingMove {
+    0% {
+        opacity: 0;
+        transform: translateX(100px) translateY(-100px);
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateX(-100px) translateY(100px);
+    }
+}
