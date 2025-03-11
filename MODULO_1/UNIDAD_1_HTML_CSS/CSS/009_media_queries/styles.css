@@ -1,0 +1,325 @@
+/* Reset básico */
+body,
+h1,
+p,
+button {
+    margin: 0;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f4f8;
+}
+
+/* Estilos base para la tarjeta de perfil */
+.profile-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    text-align: center;
+    transition: all 0.3s ease;
+    /* Transición suave para cambios en el diseño y color */
+}
+
+/* Estilo para la imagen de perfil */
+.profile-image img {
+    border-radius: 50%;
+    margin-bottom: 1rem;
+    transition: all 0.3s ease;
+    /* Transición suave para efectos visuales */
+    width: 110px;
+}
+
+/* Información del perfil */
+.profile-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.profile-name {
+    color: #333;
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    transition: all 0.3s ease;
+    /* Transición suave para ajustes tipográficos */
+}
+
+.profile-description {
+    color: rgb(100, 100, 100);
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    transition: all 0.3s ease;
+    /* Transición suave para ajustes tipográficos */
+}
+
+.profile-name::after {
+    content: ": Marc Rodríguez Martínez";
+}
+
+.profile-description::after {
+    content: ": Apasionado del desarrollo web y la tecnología, siempre en busca de nuevas formas de crear experiencias digitales innovadoras. Fanático del código limpio, los videojuegos retro y la cultura geek.";
+}
+
+/* Botón de acción */
+.profile-button {
+    background-color: hsl(220, 90%, 56%);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 0.5rem 1.5rem;
+    cursor: pointer;
+    font-size: 1rem;
+    /* Tamaño inicial de fuente */
+    transition: all 0.3s ease;
+    /* Transición suave para efectos de interacción */
+}
+
+.profile-button:hover {
+    background-color: hsl(220, 90%, 46%);
+}
+
+/* Media Queries */
+
+/* Móviles (Vertical) - Pantallas pequeñas */
+@media (max-width: 480px) {
+
+    .profile-image img {
+        content: url('images/dispositivos-muy-pequeños.png')
+    }
+
+    /* Cambia el color de fondo de la tarjeta a rojo */
+    .profile-card {
+        background-color: #ff6b6b;
+    }
+
+    /* Reduce el tamaño de fuente del nombre y descripción */
+    .profile-name {
+        font-size: 1.2rem;
+    }
+
+    .profile-description {
+        font-size: 0.8rem;
+    }
+
+    /* Cambia el color del botón a turquesa */
+    .profile-button {
+        background-color: #4ecdc4;
+        font-size: 0.8rem;
+        /* Reducir el tamaño de fuente del botón */
+        padding: 0.4rem 1rem;
+        /* Reducir el tamaño del botón */
+    }
+}
+
+/* Móviles (Horizontal) - Pantallas medianas */
+@media (min-width: 481px) and (max-width: 767px) {
+
+    .profile-image img {
+        content: url('images/smartphone.png')
+    }
+
+    /* Cambia el color de fondo de la tarjeta a turquesa */
+    .profile-card {
+        background-color: #4ecdc4;
+        flex-direction: row;
+        /* Cambia el diseño a una fila */
+        text-align: left;
+        /* Alinea el texto a la izquierda */
+    }
+
+    /* Añade margen entre la imagen y la información */
+    .profile-image {
+        margin-right: 1rem;
+    }
+
+    /* Cambia la alineación de la información */
+    .profile-info {
+        align-items: flex-start;
+    }
+
+    /* Cambia el color del botón a amarillo */
+    .profile-button {
+        background-color: #ffe66d;
+        font-size: 0.9rem;
+        /* Ajuste moderado del tamaño de fuente */
+        padding: 0.5rem 1.2rem;
+        /* Ajuste moderado del tamaño del botón */
+    }
+}
+
+/* Tabletas (Vertical) - Pantallas medianas-grandes */
+@media (min-width: 768px) and (max-width: 1024px) {
+
+    .profile-image img {
+        content: url('images/smartphone-horizontal.png');
+    }
+
+    /* Cambia el color de fondo de la tarjeta a amarillo */
+    .profile-card {
+        background-color: #ffe66d;
+    }
+
+    /* Incrementa el tamaño de fuente del nombre y descripción */
+    .profile-name {
+        font-size: 2rem;
+    }
+
+    .profile-description {
+        font-size: 1.2rem;
+    }
+
+    /* Cambia el color del botón a rojo */
+    .profile-button {
+        background-color: #ff6b6b;
+        font-size: 1rem;
+        /* Mantener tamaño estándar */
+        padding: 0.6rem 1.5rem;
+        /* Aumento ligero del tamaño del botón */
+    }
+}
+
+
+/* Tabletas */
+@media (min-width: 1025px) and (max-width: 1279px) {
+    .profile-image img {
+        content: url('images/tablet.png');
+    }
+
+    /* Cambia el color de fondo de la tarjeta a azul oscuro */
+    .profile-card {
+
+        background-color: #13096d;
+        flex-direction: row;
+        /* Cambia el diseño a una fila */
+        justify-content: space-between;
+        /* Distribuye los elementos equitativamente */
+        text-align: left;
+        /* Alinea el texto a la izquierda */
+    }
+
+    .profile-name {
+        color: aliceblue;
+    }
+
+    .profile-description {
+        color: #fff;
+    }
+
+    /* Añade mayor margen entre la imagen y la información */
+    .profile-image {
+        margin-right: 2rem;
+    }
+
+    /* Cambia la alineación de la información */
+    .profile-info {
+        align-items: flex-start;
+    }
+
+    /* Cambia el color del botón a rojo */
+    .profile-button {
+        background-color: #ff6b6b;
+        font-size: 1.1rem;
+        /* Aumento moderado del tamaño de fuente */
+        padding: 0.7rem 1.8rem;
+        /* Aumento moderado del tamaño del botón */
+    }
+}
+
+/* Desktops - Pantallas muy grandes */
+@media (min-width: 1280px) and (max-width: 1919px) {
+    .profile-image img {
+        content: url('images/monitores.png');
+    }
+
+    /* Cambia el color de fondo de la tarjeta a turquesa */
+    .profile-card {
+        background-color: #4ecdc4;
+        flex-direction: column;
+        /* Cambia el diseño a una columna */
+        align-items: center;
+        /* Centra los elementos verticalmente */
+        text-align: center;
+        /* Centra el texto */
+    }
+
+    /* Incrementa significativamente el tamaño de fuente del nombre y descripción */
+    .profile-name {
+        font-size: 2.5rem;
+    }
+
+    .profile-description {
+        font-size: 1.5rem;
+    }
+
+    /* Cambia el color del botón a amarillo */
+    .profile-button {
+        background-color: #ffe66d;
+        font-size: 1.2rem;
+        /* Aumento considerable del tamaño de fuente */
+        padding: 0.8rem 2rem;
+        /* Aumento considerable del tamaño del botón */
+    }
+}
+
+/* Desktops Muy Grandes - Pantallas ultra grandes */
+@media (min-width: 1920px) {
+
+    .profile-image img {
+        content: url('images/monitores-muy-grandes.png');
+    }
+
+    /* Cambia el color de fondo de la tarjeta a amarillo */
+    .profile-card {
+        background-color: #ffe66d;
+        flex-direction: row;
+        /* Cambia el diseño a una fila */
+        justify-content: space-around;
+        /* Distribuye los elementos con espacio entre ellos */
+        text-align: left;
+        /* Alinea el texto a la izquierda */
+    }
+
+    /* Añade mayor margen entre la imagen y la información */
+    .profile-image {
+        margin-right: 2rem;
+    }
+
+    /* Cambia la alineación de la información */
+    .profile-info {
+        align-items: flex-start;
+    }
+
+    /* Cambia el color del botón a azul oscuro */
+    .profile-button {
+        background-color: #1a535c;
+        font-size: 1.3rem;
+        /* Aumento máximo del tamaño de fuente */
+        padding: 1rem 2.5rem;
+        /* Aumento máximo del tamaño del botón */
+    }
+}
+
+/* Retina - Dispositivos con alta resolución */
+@media (-webkit-min-device-pixel-ratio: 2),
+(min-resolution: 192dpi) {
+
+    /* Aumenta la profundidad de la sombra de la tarjeta */
+    .profile-card {
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Añade un borde blanco al botón */
+    .profile-button {
+        border: 2px solid #fff;
+    }
+}

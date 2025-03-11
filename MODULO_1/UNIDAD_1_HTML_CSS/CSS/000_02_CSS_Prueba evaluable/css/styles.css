@@ -1,0 +1,321 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Tektur:wght@500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Lato", sans-serif;
+    background-color: black;
+    color: white;
+    line-height: 1.6;
+}
+
+
+header {
+    background-color: #6a6a6a;
+    padding: 1rem;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+/* Logo */
+.logo {
+    width: 70px;
+    height: auto;
+}
+
+/* Título */
+.title {
+    font-family: "Tektur", sans-serif;
+    font-size: 3.5rem;
+    color: white;
+    text-shadow: 0px 0px 15px #00ffff;
+}
+
+.menu {
+    display: flex;
+    justify-content: flex-end;
+    list-style: none;
+    gap: 1.5rem;
+}
+
+.menu li {
+    list-style: none;
+}
+
+.menu li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: color 0.3s ease;
+    padding: 10px 15px;
+}
+
+.menu li a.active,
+.menu li a:hover {
+    color: #00ffff;
+}
+
+.future {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+    background: url('../image/cyberpunk.jpg') no-repeat center center/cover;
+    position: relative;
+    text-align: center;
+}
+
+.future::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+}
+
+.future-content {
+    z-index: 1;
+    padding: 30px;
+}
+
+/* Título dentro de la imagen */
+.future-content h2 {
+    font-family: "Tektur", sans-serif;
+    font-size: 4rem;
+    /* Más grande de base */
+    color: white;
+    text-shadow: 0px 0px 20px #00ffff;
+    background-color: white;
+    padding: 15px 30px;
+    border-radius: 15px;
+    box-shadow: 0px 0px 10px #00ffff;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.future-content h2:hover {
+    transform: scale(1.2);
+    box-shadow: 0px 0px 30px #ff00ff;
+}
+
+/* ======= CONTACT FORM ======= */
+.contact-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+}
+
+.contact-form {
+    max-width: 700px;
+    width: 100%;
+    padding: 2rem;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px #00ffff;
+    text-align: center;
+}
+
+/* Formato del Formulario */
+.contact-form h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.contact-form label {
+    font-size: 1.2rem;
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    text-align: left;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 0.9rem;
+    margin-bottom: 1rem;
+    border: none;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+    font-size: 1.2rem;
+}
+
+button {
+    width: 100%;
+    padding: 0.8rem;
+    border: none;
+    border-radius: 5px;
+    background-color: #00ffff;
+    color: black;
+    font-weight: bold;
+    font-size: 1.3rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #ff00ff;
+}
+
+/*  FOOTER  */
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #6b6b6b;
+    color: white;
+}
+
+@media(max-width: 1080px) {
+    .future-content h2 {
+        color: #6a6a6a;
+        font-size: 200%;
+        padding: 10px 20px;
+    }
+}
+
+
+
+
+/*  (Tablets, 768px) */
+@media (max-width: 768px) {
+
+    /* Header */
+    .logo-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .logo {
+        width: 60px;
+    }
+
+    .title {
+        font-size: 2.5rem;
+    }
+
+    /* Menú en columna centrado */
+    .menu {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.8rem;
+    }
+
+    /* Future */
+    .future {
+        height: 70vh;
+    }
+
+
+
+    .future-content h2 {
+        color: #6a6a6a;
+        font-size: 90%;
+        padding: 10px 20px;
+    }
+
+    /* Contact Form */
+    .contact-form {
+        max-width: 90%;
+        padding: 1.5rem;
+    }
+
+    .contact-form h2 {
+        font-size: 1.8rem;
+    }
+
+    .contact-form label {
+        font-size: 1rem;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+        font-size: 1rem;
+        padding: 0.6rem;
+    }
+
+    button {
+        font-size: 1rem;
+        padding: 0.6rem;
+    }
+}
+
+/*  (Móviles, 480px) */
+@media (max-width: 480px) {
+
+    /* Header */
+    .header {
+        font-size: 80%;
+    }
+
+    .title {
+        font-size: 2rem;
+    }
+
+    .logo {
+        width: 50px;
+    }
+
+    h1.title {
+        width: 50%;
+    }
+
+    /* Menú en columna con más espacio */
+    .menu {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    /* Future */
+    .future {
+        height: 50vh;
+    }
+
+    .future-content h2 {
+        font-size: 80%;
+        color: #6a6a6a;
+        /* Reducción más notoria en móviles */
+        padding: 8px 15px;
+    }
+
+    /* Contact Form */
+    .contact-form {
+        max-width: 95%;
+        padding: 1rem;
+    }
+
+    .contact-form h2 {
+        font-size: 1.5rem;
+    }
+
+    .contact-form label {
+        font-size: 0.9rem;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+        font-size: 0.9rem;
+        padding: 0.5rem;
+    }
+
+    button {
+        font-size: 0.9rem;
+        padding: 0.5rem;
+    }
+}

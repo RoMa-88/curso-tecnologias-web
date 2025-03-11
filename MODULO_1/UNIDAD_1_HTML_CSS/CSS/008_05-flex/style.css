@@ -1,0 +1,51 @@
+/* RESET bàsic */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Contenidor de la galeria */
+.galeria {
+    width: 100%;
+    margin: 0 auto;
+}
+
+/* 8 columnes en pantalles grans */
+.galeria img {
+    float: left;
+    width: 12.5%;
+    /* 100/8 = 12.5% */
+    border: none;
+}
+
+/* Exemples de punts de tall típics: */
+/* Max-width: 1200px => 6 columnes */
+@media (max-width: 1200px) {
+    .galeria img {
+        width: 16.6667%;
+        /* 100/6 = 16.6667% */
+    }
+}
+
+/* Max-width: 992px => 4 columnes */
+@media (max-width: 992px) {
+    .galeria img {
+        width: 25%;
+        /* 100/4 = 25% */
+    }
+}
+
+/* Max-width: 600px => 2 columnes */
+@media (max-width: 600px) {
+    .galeria img {
+        width: 50%;
+        /* 100/2 = 50% */
+    }
+}
+
+/* Max-width: 400px => 1 columna */
+@media (max-width: 400px) {
+    .galeria img {
+        width: 100%;
+    }
+}

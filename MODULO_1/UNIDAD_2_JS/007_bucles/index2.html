@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bucles</title>
+</head>
+
+<body>
+    <script>
+        // Pedimos al usuario el límite del bucle
+        let limiteUsuario = parseInt(prompt("Introduce un número positivo entre 1 y 50:"));
+
+        // Validamos que el número esté en el rango correcto
+        while (isNaN(limiteUsuario) || limiteUsuario < 1 || limiteUsuario > 50) {
+            alert("El número debe estar entre 1 y 50. Inténtalo nuevamente.");
+            limiteUsuario = parseInt(prompt("Introduce un número positivo entre 1 y 50:"));
+
+            // Si el usuario cancela el prompt, salimos del bucle [ventana de alert vacia]
+            if (limiteUsuario === null) {
+                alert("Operación cancelada. Recargando la página...");
+                window.location.reload();
+            }
+        }
+
+        let coma = ' , ';
+
+        // Iteramos desde 0 hasta el límite ingresado por el usuario
+        for (let i = 0; i <= limiteUsuario; i++) {
+            if (i === limiteUsuario) { // Comprobamos si estamos en el último número
+                coma = ''; // Eliminamos la coma para el último número
+            }
+            document.write(i + coma);
+        }
+    </script>
+</body>
+
+</html>

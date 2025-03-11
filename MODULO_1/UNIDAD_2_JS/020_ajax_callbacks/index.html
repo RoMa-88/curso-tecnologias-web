@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="cuerpo">
+
+    </div>
+
+    <input><button onclick='datosAPI()'>Enviar</button>
+    <script>
+        async function datosAPI() {
+            const nombre = document.querySelector('input').value;
+            const datosAPI = await fetch("https://jsonplaceholder.typicode.com/posts");
+            const datos = await datosAPI.json();
+            for (let elemento of datos) {// for in para objetos for of para arrays
+                document.querySelector('#cuerpo').innerHTML +=
+                    `
+                <div>${elemento.title}</div>
+                <div>${elemento.body}</div>`;
+
+            }
+            /*             let html = datos.map(function(elemento){
+                           return [
+                        `
+                            <div>${elemento.title}</div>
+                            <div>${elemento.body}</div>`
+                           ]
+                        }) */
+            //   document.querySelector('#cuerpo').innerHTML = html;
+            console.log(datos)
+
+        }
+
+    </script>
+</body>
+
+</html>

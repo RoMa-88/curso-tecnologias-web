@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calcular Edad</title>
+</head>
+
+<body>
+    <h1>Calculadora de Edad</h1>
+
+    <script>
+        //funcion para validar el formato de fecha con expresiones regulares
+        function esFechaValida(fecha) {
+            const regex = /^\d{4}-\d{2}-\d{2}$/;
+            if (!regex.test(fecha)) {
+                return false; // si el formato no es valido  
+            }
+            const date = new Date(fecha); // convertimos la fecha a un objeto 'date'
+            const timestamp = date.getTime();
+            if (typeof timestamp !== 'number' || Number.isNaN(timestamp)) {
+                return false; // algo anda mal con la fecha
+            }
+            const [year, month, day] = fecha.split('-'); // dividimos la fecha por '-'
+            if (
+                date.getUTCFullYear() !== parseInt(year) || // el año no cuadra
+                date.getUTCMonth() + 1 !== parseInt(month) || // el mes no cuadra
+                date.getUTCDate() !== parseInt(day) // el dia no cuadra
+            ) {
+                return false; // algo esta mal aqui
+            }
+            return true; // todo bien!
+        }
+
+        // funcion para calcular la edad del usuario
+        function calcularEdad() {
+            // pedimos al usuario su fecha de nacimiento usando prompt
+            const inputFecha = prompt("introduce tu fecha de nacimiento (formato YYYY-MM-DD):");
+
+            // validamos que el usuario haya ingresado algo
+            if (!inputFecha) {
+                document.write("<p>por favor, introduce una fecha valida.</p>");
+                return;
+            }
+
+            // ahora validamos la fecha con nuestra funcion especial
+            if (!esFechaValida(inputFecha)) {
+                document.write("<p>la fecha que pusiste no es valida.</p>");
+                return;
+            }
+
+            // creamos un objeto date con la fecha de nacimiento
+            const fechaNacimiento = new Date(inputFecha);
+
+            // obtenemos la fecha actual del sistema
+            const fechaActual = new Date();
+
+            // aseguramos que la fecha de nacimiento no sea futura
+            if (fechaNacimiento > fechaActual) {
+                document.write("<p>no puedes ser del futuro, amigo!</p>");
+                return;
+            }
+
+            // calculamos la diferencia de años entre las fechas
+            let edad = fechaActual.getFullYear() - fechaNacimiento.getFullYear();
+
+            // ajustamos la edad si todavia no ha sido tu cumpleaños este año
+            const mesNacimiento = fechaNacimiento.getMonth();
+            const diaNacimiento = fechaNacimiento.getDate();
+            const mesActual = fechaActual.getMonth();
+            const diaActual = fechaActual.getDate();
+
+            if (mesActual < mesNacimiento || (mesActual === mesNacimiento && diaActual < diaNacimiento)) {
+                edad--; // restamos un año porque todavia no cumples años
+            }
+
+            // mostramos la edad final usando document.write
+            document.write(`<p>tienes ${edad} años. felicidades!</p>`);
+        }
+
+        // ejecutamos la funcion cuando cargue la pagina
+        window.onload = calcularEdad;
+    </script>
+</body>
+
+</html>

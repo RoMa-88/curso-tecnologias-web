@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificación de Usuario, Funcion Recursiva</title>
+</head>
+
+<body>
+    <script>
+        const resultadoCorrecto = 5 + 9; // El resultado correcto de la suma
+        const maxIntentos = 3; // Número máximo de intentos permitidos
+        let intentos = 0; // Contador de intentos
+
+        function verificarRespuesta() {
+            if (intentos >= maxIntentos) {
+                alert("Has agotado tus 3 intentos. Redireccionando a los Mossos...");
+                window.location.href = "https://mossos.gencat.cat/ca/inici"; // Redirección
+                return;
+            }
+
+            const respuestaUsuario = parseInt(prompt("Comprobemos que eres humano. Introduce el resultado de 5 + 9:"));
+
+            if (respuestaUsuario === resultadoCorrecto) {
+                alert("Resultado correcto. Bienvenido!");
+            } else {
+                intentos++; // Incrementamos el contador de intentos
+                alert(`Incorrecto. Te quedan ${maxIntentos - intentos} intentos.`);
+                verificarRespuesta(); // Llamada recursiva si la respuesta es incorrecta
+            }
+        }
+
+        verificarRespuesta(); // Iniciar la función de verificación
+    </script>
+</body>
+
+</html>

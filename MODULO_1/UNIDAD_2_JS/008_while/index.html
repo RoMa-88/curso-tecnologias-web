@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bucle - While</title>
+</head>
+
+<body>
+    <script>
+        // --- WHILE -- //
+        document.write("<h2>Conteo con while (del 0 al 9):</h2><br>");
+
+        let i = 0; // Inicializamos la variable de control
+
+        // Bucle while: Se ejecuta mientras la condición sea verdadera
+        while (i < 10) {
+            document.write(i + "<br>"); // Imprimimos el valor actual de i
+            i++; // Incrementamos i en 1
+        }
+
+        // --- DO WHILE -- //
+        document.write("<h2>Conteo con do-while (del 9 al 0):</h2><br>");
+
+        let j = 9; // Inicializamos otra variable de control
+
+        // Bucle do-while: Ejecuta el bloque de código al menos una vez antes de verificar la condición
+        do {
+            document.write(j + "<br>"); // Imprimimos el valor actual de j
+            j--; // Decrementamos j en 1
+        } while (j >= 0); // La condición se verifica después de ejecutar el bloque
+
+    </script>
+</body>
+
+</html>

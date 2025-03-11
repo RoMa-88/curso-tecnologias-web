@@ -1,0 +1,313 @@
+/*  style generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/*  Cabecera */
+header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+
+/* Barra de navegación (navbar)*/
+nav {
+    background-color: #333;
+    overflow: hidden;
+}
+
+nav a {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+nav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+/*  Contenedor principal */
+main {
+    display: flex;
+    flex: 1;
+    flex-wrap: wrap;
+    padding: 1rem;
+}
+
+article {
+    flex: 4;
+    padding: 1rem;
+    padding-right: 5rem;
+}
+
+aside {
+    flex: 1;
+    padding: 1rem;
+    background-color: #f4f4f4;
+}
+
+/*  Pie de página */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
+
+footer>span {
+    font-size: small;
+}
+
+/* div de galería */
+.galeria {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    /* Se ajusta según el tamaño de la pantalla , encontre esta documentación en stack overflow*/
+    gap: 15px;
+    /* Espaciado entre imágenes */
+    padding: 20px;
+    max-width: 1200px;
+    margin: auto;
+    justify-content: center;
+}
+
+/* stilos de las img */
+.galeria img {
+    width: 100%;
+    /* Que ocupen todo el ancho disponible dentro de la celda del grid */
+    height: auto;
+    /* Mantiene la proporción */
+    max-width: 300px;
+    /* Tamaño máximo para evitar que se agranden */
+    min-width: 150px;
+    /* Evita que sean demasiado pequeñas */
+    border-radius: 5px;
+    object-fit: cover;
+    /* Se asegura de que la imagen mantenga su forma sin deformarse */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* efecto hover para que resalten */
+.galeria img:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+
+
+
+
+
+/* style del formulario */
+form {
+    display: flex;
+    flex-direction: column;
+    background-color: #e8f5e9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 400px;
+    margin: auto;
+}
+
+/* style para los labels */
+label {
+    font-weight: bold;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+/*  Inputs y selects */
+input,
+select {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #007300;
+    border-radius: 5px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/*  btn de enviar */
+input[type="submit"] {
+    background-color: #007300;
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 12px;
+    font-size: 18px;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+input[type="submit"]:hover {
+    background-color: #004d00;
+}
+
+/* conntenedor de la experiencia laboral */
+#divcontenedor {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #e3f2fd;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 500px;
+    margin: auto;
+}
+
+/* inputs de experiencia */
+.input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    /* Espaciado entre los elementos */
+    margin-bottom: 10px;
+}
+
+/* ajstes para el input del puesto */
+#inputPuesto {
+    height: 45px;
+    font-size: 18px;
+    width: 100%;
+}
+
+a
+
+/* ajustes para las fechas */
+#fechaInicio,
+#fechaFin {
+    width: 100%;
+}
+
+/*  Checkbox alineado */
+#actualmenteTrabajando {
+    margin-right: 5px;
+}
+
+/* btn de agregar experiencia */
+#añadirExperienciaBtn {
+    background-color: #007300;
+    color: white;
+    border: none;
+    padding: 12px;
+    font-size: 18px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 15px;
+}
+
+#añadirExperienciaBtn:hover {
+    background-color: #004d00;
+}
+
+/* list de experiencia laboral */
+.experiencia-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+    background-color: white;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+
+/* btn de eliminar */
+.delete-btn {
+    width: 25px;
+    height: 25px;
+    background-color: red;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+}
+
+.delete-btn:hover {
+    background-color: darkred;
+}
+
+/* media queries */
+
+
+
+
+
+
+
+
+
+
+
+/* mediaQuery para pantallas pequeñas */
+@media (max-width: 768px) {
+    nav a {
+        float: none;
+        width: 100%;
+    }
+
+    main {
+        flex-direction: column;
+    }
+
+    article,
+    aside {
+        flex: 1;
+        margin: 0.5rem 0;
+    }
+
+    /*  Galería en una sola columna */
+    .galeria {
+        display: grid;
+        grid-template-columns: 1fr;
+        /* Fuerza a que haya solo una columna */
+        gap: 10px;
+        /* Espacio entre imágenes */
+        justify-content: center;
+        align-items: center;
+    }
+
+    .galeria img {
+        max-width: 100%;
+        /* Ocupará todo el ancho del contenedor */
+        height: auto;
+        /* Mantiene la proporción */
+        margin: auto;
+    }
+
+    form,
+    #divcontenedor {
+        width: 95%;
+    }
+}
+
+/* media Query para móviles aún más pequeños */
+@media (max-width: 480px) {
+    .galeria {
+        grid-template-columns: 1fr;
+    }
+
+    .galeria img {
+        max-width: 90%;
+    }
+}

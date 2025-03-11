@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objeto Persona</title>
+</head>
+
+<body>
+    <script>
+        // Definimos el objeto persona
+        let persona = {
+            nombre: "Juan",
+            apellido: "Nadie",
+            edad: 50,
+            ojosColor: {
+                izquierdo: "Verde",
+                derecho: "Azul"
+            },
+            altura: 1.80
+        };
+
+        // 1. Imprimimos todos los datos del objeto en una lista
+        document.write("<h3>Datos de la persona:</h3>");
+        for (const key in persona) {
+            if (key === "ojosColor") {
+                // Si la clave es "ojosColor", mostramos sus propiedades internas
+                document.write(`&nbsp;&nbsp;${key}:<br>`);
+                document.write(`&nbsp;&nbsp;&nbsp;&nbsp;Izquierdo: ${persona[key].izquierdo}<br>`);
+                document.write(`&nbsp;&nbsp;&nbsp;&nbsp;Derecho: ${persona[key].derecho}<br>`);
+            } else {
+                // Para las demás propiedades, simplemente mostramos clave y valor
+                document.write(`&nbsp;&nbsp;${key}: ${persona[key]}<br>`);
+            }
+        }
+
+        // 2. Creamos la cadena solicitada
+        document.write("<hr><h3>Mensaje inicial:</h3>");
+        const mensajeInicial = `
+            Hola ${persona.nombre} ${persona.apellido}, tu edad es de ${persona.edad} años y mides ${persona.altura.toFixed(2)} m.<br>
+            Eres como David Bowie porque tienes el ojo izquierdo ${persona.ojosColor.izquierdo.toLowerCase()} y el derecho ${persona.ojosColor.derecho.toLowerCase()}.<br>
+            Bienvenido!!
+        `;
+        document.write(mensajeInicial);
+
+        // 3. Cambiamos el nombre y el color del ojo derecho
+        persona.nombre = "Marc"; // Cambiamos el nombre
+        persona.ojosColor.derecho = "Marron"; // Cambiamos el color del ojo derecho
+
+        // 4. Creamos el nuevo mensaje con los cambios
+        document.write("<hr><h3>Mensaje después de los cambios:</h3>");
+        const mensajeModificado = `
+            Hola ${persona.nombre} ${persona.apellido}, tu edad es de ${persona.edad} años y mides ${persona.altura.toFixed(2)} m.<br>
+            Ahora tienes el ojo izquierdo ${persona.ojosColor.izquierdo.toLowerCase()} y el derecho ${persona.ojosColor.derecho.toLowerCase()}.<br>
+            ¡Bienvenido de nuevo!!
+        `;
+        document.write(mensajeModificado);
+    </script>
+</body>
+
+</html>

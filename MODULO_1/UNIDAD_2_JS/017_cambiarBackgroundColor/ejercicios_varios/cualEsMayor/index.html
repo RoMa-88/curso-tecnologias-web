@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comparar Números Enteros</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 20px;
+        }
+
+        #formulario {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        #resultado {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        label {
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <form id="formulario" action="">
+        <label for="numero1">Introduce un número entero:</label>
+        <input name="numero1" type="number" required>
+        <br><br>
+        <label for="numero2">Introduce otro número entero:</label>
+        <input name="numero2" type="number" required>
+        <br><br>
+        <button type="button" id="compararBtn">Comparar</button>
+    </form>
+    <div id="resultado"></div>
+    <script>
+        // busco los elementos del dom
+        const formulario = document.getElementById('formulario');
+        const compararBtn = document.getElementById('compararBtn');
+        const resultadoDiv = document.getElementById('resultado');
+
+        // funcion para determinar el mayor usando math.max
+        function encontrarMayor(num1, num2) {
+            if (num1 === num2) {
+                return `has ingresado los numeros ${num1} y ${num2} y ambos son iguales`;
+            } else {
+                const mayor = Math.max(num1, num2); // uso math.max directamente sin spread
+                return `has ingresado los numeros ${num1} y ${num2} y el mayor es el ${mayor}`;
+            }
+        }
+
+        // evento click cuando presionan el boton comparar
+        compararBtn.addEventListener('click', function () {
+            // obtengo los valores de los inputs y los convierto a enteros
+            const num1 = parseInt(formulario.numero1.value, 10);
+            const num2 = parseInt(formulario.numero2.value, 10);
+
+            // valido si son numeros validos
+            if (isNaN(num1) || isNaN(num2)) {
+                resultadoDiv.innerHTML = '<h1 style="color:red;">por favor, ingresa numeros enteros validos.</h1>';
+                return;
+            }
+
+            // llamo a la funcion para calcular el mayor
+            const resultado = encontrarMayor(num1, num2);
+
+            // muestro el resultado en el div
+            resultadoDiv.innerHTML = `<h1>${resultado}</h1>`;
+        });
+    </script>
+</body>
+
+</html>

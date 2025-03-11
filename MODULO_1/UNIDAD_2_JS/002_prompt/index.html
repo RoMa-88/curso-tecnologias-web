@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo de Prompt I/O</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: 'Arial', sans-serif;
+            font-size: 24px;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        // Definimos el mensaje de saludo
+        let saludo = "Hola, bienvenido a nuestra página";
+
+        // Pedimos al usuario que introduzca su nombre mediante un prompt
+        let nombre = prompt("Por favor, escribe tu nombre");
+
+        // Mostramos un mensaje de bienvenida utilizando alert
+        alert(saludo + ", " + nombre);
+
+        // Imprimimos el mismo mensaje en la página web usando document.write
+        document.write(saludo + ", " + nombre);
+
+        // Imprimimos el mensaje en la consola del navegador con console.log
+        console.log(saludo + ", " + nombre);
+    </script>
+</body>
+
+</html>

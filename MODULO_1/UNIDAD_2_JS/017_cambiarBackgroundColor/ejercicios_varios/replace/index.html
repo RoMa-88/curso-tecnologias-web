@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Replace</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        input,
+        button {
+            margin-top: 10px;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            background: #ddd;
+            margin: 5px;
+            padding: 5px;
+            display: inline-block;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Reemplaçar una paraula en una frase</h1>
+    <p id="frase">Aquesta és una frase de prova.</p>
+    <button id="replaceBtn">Reemplaçar</button>
+
+    <script>
+        // Esperem que el DOM estigui llest
+        document.addEventListener("DOMContentLoaded", function () {
+            // Obtenim els elements del DOM
+            const btn = document.getElementById("replaceBtn");
+            const fraseElement = document.getElementById("frase");
+
+            // Afegim l'event al botó
+            btn.addEventListener("click", function () {
+                // Obtenim la frase actual
+                let frase = fraseElement.textContent;
+
+                // Demanem la paraula a reemplaçar
+                let paraulaVella = prompt("Introdueix la paraula a reemplaçar:");
+
+                // Comprovem que l'usuari ha introduït alguna cosa
+                if (!paraulaVella || !frase.includes(paraulaVella)) {
+                    alert("La paraula no es troba en la frase o no has introduït cap paraula.");
+                    return;
+                }
+
+                // Demanem la nova paraula
+                let paraulaNova = prompt("Introdueix la nova paraula:");
+
+                // Comprovem que l'usuari ha introduït una nova paraula
+                if (!paraulaNova) {
+                    alert("Has de posar la nova paraula!");
+                    return;
+                }
+
+                // Substituïm **totes** les ocurrències de la paraula utilitzant una expressió regular
+                let novaFrase = frase.replace(new RegExp(paraulaVella, "g"), paraulaNova);
+
+                // Mostrem la nova frase a la pàgina
+                fraseElement.textContent = novaFrase;
+            });
+        });
+
+    </script>
+</body>
+
+</html>

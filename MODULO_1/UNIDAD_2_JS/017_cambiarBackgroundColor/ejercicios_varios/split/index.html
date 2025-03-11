@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>split</title>
+    <style>
+        /* Estil general de la pàgina */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f5f5f5;
+            text-align: center;
+            margin: 40px;
+        }
+
+        /* Estil per als inputs i botons */
+        input,
+        button {
+            padding: 10px;
+            margin-top: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        /* Estil del botó */
+        button {
+            background-color: #007BFF;
+            color: white;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        /* Llista estilitzada */
+        ul {
+            list-style: none;
+            padding: 0;
+            margin-top: 20px;
+        }
+
+        /* Elements de la llista */
+        li {
+            background: white;
+            padding: 10px;
+            margin: 5px auto;
+            width: 60%;
+            border-radius: 8px;
+            box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+            transition: 0.3s;
+        }
+
+        /* Animació al passar el ratolí */
+        li:hover {
+            background: #e3f2fd;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Dividir una frase en paraules</h1>
+    <label for="frase">Escriu una frase:</label>
+    <input type="text" id="frase">
+    <button id="btn">Dividir</button>
+    <ul id="llista"></ul>
+    <script>
+        // Esperem a que el DOM estigui llest
+        document.addEventListener("DOMContentLoaded", function () {
+            // Obtenim els elements del DOM
+            const btn = document.getElementById("btn");
+            const inputFrase = document.getElementById("frase");
+            const llista = document.getElementById("llista");
+
+            // Afegim l'event al botó
+            btn.addEventListener("click", function () {
+                // Obtenim el valor de l'input
+                let frase = inputFrase.value.trim();
+
+                // Comprovem que l'usuari ha introduït alguna cosa
+                if (frase === "") {
+                    alert("Si us plau, escriu una frase!");
+                    return;
+                }
+
+                // Dividim la frase en paraules usant split()
+                let fraseArray = frase.split(" ");
+
+                // Netejem la llista abans d'afegir elements nous
+                llista.innerHTML = "";
+
+                // Afegim cada paraula com a element de la llista
+                for (let i = 0; i < fraseArray.length; i++) {
+                    let elementoLista = document.createElement("li"); // Creem un element <li>
+                    elementoLista.textContent = fraseArray[i]; // Assignem el text
+                    llista.appendChild(elementoLista); // L'afegim a la llista
+                }
+            });
+        });
+
+    </script>
+</body>
+
+</html>

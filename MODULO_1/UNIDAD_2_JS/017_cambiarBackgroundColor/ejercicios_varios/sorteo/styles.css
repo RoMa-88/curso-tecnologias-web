@@ -1,0 +1,134 @@
+body {
+    display: flex;
+    align-items: center;
+    vertical-align: middle;
+}
+
+div {
+    border-radius: 5px;
+    box-shadow: 3px 3px 6px black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    vertical-align: middle;
+    height: 70vh;
+    width: 60vw;
+    padding: 30px;
+}
+
+/* Establecemos una fuente moderna y atractiva */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap');
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #1e1e2e;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    background: #282a36;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
+    width: 400px;
+}
+
+/* Estilo del título */
+h2 {
+    color: #ff79c6;
+    font-weight: 700;
+}
+
+/* Estilo del formulario */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Estilo del input */
+input[type="text"] {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ffb86c;
+    background-color: #44475a;
+    color: white;
+}
+
+/* Botones con estilos llamativos */
+.boton {
+    width: 100%;
+    padding: 12px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.boton:hover {
+    opacity: 0.8;
+}
+
+/* Estilo para el botón "Añadir" */
+input[type="submit"] {
+    background-color: #50fa7b;
+    color: black;
+}
+
+/* Estilo para el botón "Sortear" */
+#sortear {
+    background-color: #ffb86c;
+    color: black;
+    margin-top: 10px;
+}
+
+/* Lista de concursantes */
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    background: #6272a4;
+    margin: 5px 0;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 18px;
+    text-transform: capitalize;
+}
+
+/* Estilo especial para el ganador */
+.ganador {
+    background-color: yellow;
+    font-weight: bold;
+    border: 2px solid gold;
+    color: black;
+}
+
+.boton {
+    margin: 10px;
+    width: 150px;
+    border-radius: 5px;
+    border: 0;
+    padding: 15px 10px;
+    background-color: rgb(76, 175, 80);
+    cursor: pointer;
+}
+
+#sortear {
+    background-color: chocolate;
+}
+
+/* Nova classe per al guanyador */
+.ganador {
+    background-color: yellow;
+    font-weight: bold;
+    border: 2px solid gold;
+}
