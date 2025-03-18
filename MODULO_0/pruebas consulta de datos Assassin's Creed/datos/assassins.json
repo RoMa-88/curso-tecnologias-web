@@ -1,0 +1,120 @@
+[
+    {
+        "nombre": "Bayek de Siwa",
+        "epoca": "Antiguo Egipto",
+        "ubicacion": "Egipto",
+        "nacimiento": "Siwa",
+        "juego": "Assassin's Creed Origins",
+        "anios_actividad": [
+            -49
+        ]
+    },
+    {
+        "nombre": "Kassandra",
+        "epoca": "Grecia Clásica",
+        "ubicacion": "Grecia",
+        "nacimiento": "Esparta",
+        "juego": "Assassin's Creed Odyssey",
+        "anios_actividad": [
+            -431,
+            -422
+        ]
+    },
+    {
+        "nombre": "Altaïr Ibn-La'Ahad",
+        "epoca": "Tercera Cruzada",
+        "ubicacion": "Tierra Santa",
+        "nacimiento": "Masyaf",
+        "juego": "Assassin's Creed",
+        "anios_actividad": [
+            1191,
+            1257
+        ]
+    },
+    {
+        "nombre": "Ezio Auditore",
+        "epoca": "Renacimiento",
+        "ubicacion": "Italia",
+        "nacimiento": "Florencia",
+        "juego": "Assassin's Creed II, Brotherhood, Revelations",
+        "anios_actividad": [
+            1476,
+            1513
+        ]
+    },
+    {
+        "nombre": "Edward Kenway",
+        "epoca": "Era Dorada de la Piratería",
+        "ubicacion": "Caribe",
+        "nacimiento": "Gales",
+        "juego": "Assassin's Creed IV: Black Flag",
+        "anios_actividad": [
+            1715,
+            1735
+        ]
+    },
+    {
+        "nombre": "Shay Cormac",
+        "epoca": "Guerra de los Siete Años",
+        "ubicacion": "América del Norte",
+        "nacimiento": "Irlanda",
+        "juego": "Assassin's Creed Rogue",
+        "anios_actividad": [
+            1756,
+            1763
+        ]
+    },
+    {
+        "nombre": "Arno Dorian",
+        "epoca": "Revolución Francesa",
+        "ubicacion": "Francia",
+        "nacimiento": "Versalles",
+        "juego": "Assassin's Creed Unity",
+        "anios_actividad": [
+            1789,
+            1794
+        ]
+    },
+    {
+        "nombre": "Connor Kenway",
+        "epoca": "Revolución Americana",
+        "ubicacion": "Estados Unidos",
+        "nacimiento": "Mohawk Valley",
+        "juego": "Assassin's Creed III",
+        "anios_actividad": [
+            1775,
+            1783
+        ]
+    },
+    {
+        "nombre": "Jacob Frye",
+        "epoca": "Revolución Industrial",
+        "ubicacion": "Londres",
+        "nacimiento": "Londres",
+        "juego": "Assassin's Creed Syndicate",
+        "anios_actividad": [
+            1868
+        ]
+    },
+    {
+        "nombre": "Evie Frye",
+        "epoca": "Revolución Industrial",
+        "ubicacion": "Londres",
+        "nacimiento": "Londres",
+        "juego": "Assassin's Creed Syndicate",
+        "anios_actividad": [
+            1868
+        ]
+    },
+    {
+        "nombre": "Aveline de Grandpré",
+        "epoca": "gobernación española de Luisiana",
+        "ubicacion": "Estados Unidos (Nueva Orleans)",
+        "nacimiento": "Luisiana",
+        "juego": "Assassin's Creed III: Liberation",
+        "anios_actividad": [
+            1765,
+            1777
+        ]
+    }
+]
